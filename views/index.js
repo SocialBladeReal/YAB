@@ -5,7 +5,7 @@ setInterval(() => {
   fetch(`https://api-v2.nextcounts.com/api/youtube/channel/${id}`).then((res) => res.json()).then((data) => {
                      document.getElementById("counter").innerHTML = data.estViewCount;
 
-    document.getElementById("userimg").src = data.userImg;
+    document.getElementById("userimg").src = data.snippet.thumbnails.high.url;
     document.getElementById("userName").innerHTML = data.username;
                   });
       }, 2000);
