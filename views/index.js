@@ -6,7 +6,7 @@ setInterval(() => {
                      document.getElementById("counter").innerHTML = data.estViewCount;
 
     document.getElementById("userimg").src = data.snippet.thumbnails.high.url;
-    document.getElementById("userName").innerHTML = data.username;
+    document.getElementById("userName").innerHTML = data.snippet.title;
                   });
       }, 2000);
 
