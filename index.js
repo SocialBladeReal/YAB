@@ -14,11 +14,11 @@ function search() {
   const prompt = window.prompt("Enter channel name, ID, or URL.");
   if (prompt)
     fetch(
-      `https://livecounts.xyz/api/youtube-live-subscriber-count/search/${prompt}`
+      `https://axern.space/api/search?platform=youtube&type=channel&query=${prompt}`
     )
       .then((res) => res.json())
       .then((data) => {
-        window.location.href = "?id=" + data.results[0].id;
+        window.location.href = "?id=" + data[0].id;
       });
 }
 function graphManager() {
