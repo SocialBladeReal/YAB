@@ -3,7 +3,7 @@ const id = params.get("id") || "UCX6OQ3DkcsbYNE6H8uQQuVA";
 
 setInterval(() => {
   fetch(`https://api.yabcounts.com/public/youtube/channel/${id}?key=k1DiwMgInxbLvWGc5QWxW4BZQmmD`).then((res) => res.json()).then((data) => {
-                     document.getElementById("counter").innerHTML = data.statistics.subscriberCount;
+                     document.getElementById("counter").innerHTML = data.statistics.viewCount;
 
     document.getElementById("userimg").src = data.thumbnail;
     document.getElementById("userName").innerHTML = data.name;
